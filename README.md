@@ -28,7 +28,7 @@ uv pip install git+https://github.com/xposed73/kokoro-manim-voiceover.git
 ## Important
 - You also need to download these model files
 [`kokoro-v0_19.onnx`](https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files/kokoro-v0_19.onnx) and [`voices.bin`](https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files/voices.bin)
-- Place them in root directory of yoour project
+- Place them in root directory of your project
 
 ## Example usage
 ```python
