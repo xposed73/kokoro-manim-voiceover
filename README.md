@@ -88,3 +88,8 @@ You can use any of the following voice options in your projects:
 ---
 
 Enjoy creating seamless animations with synchronized voiceovers!
+
+Sources
+[kokoro-onnx (GitHub)](https://github.com/thewh1teagle/kokoro-onnx)
+[Kokoro-82M (HuggingFace)](https://huggingface.co/hexgrad/Kokoro-82M)
+
