@@ -14,7 +14,7 @@ myenv\Scripts\activate
 
 Install Kokoro-MV from github
 ```console
-pip install git+https://github.com/xposed73/kokoro-mv.git
+pip install git+https://github.com/xposed73/kokoro-manim-voiceover.git
 ```
 
 
@@ -22,7 +22,7 @@ pip install git+https://github.com/xposed73/kokoro-mv.git
 ```console
 uv init -p 3.12
 uv venv
-uv pip install git+https://github.com/xposed73/kokoro-mv.git
+uv pip install git+https://github.com/xposed73/kokoro-manim-voiceover.git
 ```
 
 
