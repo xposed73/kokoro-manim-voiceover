@@ -17,6 +17,9 @@ setup(
     ],
     python_requires='>=3.12',
     install_requires=[
-        # List your library dependencies here
+            "kokoro-onnx>=0.3.6",
+            "manim>=0.19.0",
+            "manim-voiceover>=0.3.7",
+            "soundfile>=0.13.0"
     ],
 )
