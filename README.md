@@ -4,7 +4,7 @@ Discover **Kokoro Manim Voiceover**, a groundbreaking library for generating syn
 
 ---
 
-![Kokoro Manim Voiceover]([https://raw.githubusercontent.com/xposed73/kokoro-manim-voiceover/refs/heads/main/kokoro-manim-voiceover.jpg]?text=Kokoro+Manim+Voiceover+Library)
+![Kokoro Manim Voiceover](https://raw.githubusercontent.com/xposed73/kokoro-manim-voiceover/refs/heads/main/kokoro-manim-voiceover.jpg)
 
 ## 🔧 Installation via pip
 
