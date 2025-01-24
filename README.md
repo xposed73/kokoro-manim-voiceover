@@ -1,9 +1,9 @@
-# Instial via PIP
+# Install via pip
 ```shell
 pip install git+https://github.com/xposed73/kokoro-mv.git
 ```
 
-# Instial via UV
+# Install via uv
 ```shell
 uv init -p 3.12
 uv venv
