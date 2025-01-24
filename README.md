@@ -1,11 +1,6 @@
 # Install via pip
 
-Check your python version.
-```console
-python --version
-```
-
-```console
+```shell
 python --version
 
 python -m venv myenv
