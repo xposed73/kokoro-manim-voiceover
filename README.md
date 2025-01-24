@@ -39,6 +39,8 @@ uv pip install git+https://github.com/xposed73/kokoro-manim-voiceover.git
 
 ---
 
+### It will automatiacally install all the required things like manim, manim-voiceover etc.
+
 ## 📂 Important Notes  
 - You **must download the following model files** to enable voiceover functionality:
   - [`kokoro-v0_19.onnx`](https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files/kokoro-v0_19.onnx)
