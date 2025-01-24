@@ -1,16 +1,19 @@
 # Install via pip
+
+Check your python version.
 ```console
-# Hello
 python --version
+```
 
+```console
+python --version
 python -m venv myenv
-
 myenv\Scripts\activate
-
 pip install git+https://github.com/xposed73/kokoro-mv.git
 ```
 
 # Install via uv
+
 ```console
 uv init -p 3.12
 uv venv
@@ -19,6 +22,7 @@ uv pip install git+https://github.com/xposed73/kokoro-mv.git
 
 
 # Example usage
+
 ```python
 from manim import *
 from manim_voiceover import VoiceoverScene
