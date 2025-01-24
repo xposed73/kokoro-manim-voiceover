@@ -1,5 +1,8 @@
 # Install via pip
 ```console
+python --version
+python -m venv myenv
+myenv\Scripts\activate
 pip install git+https://github.com/xposed73/kokoro-mv.git
 ```
 
