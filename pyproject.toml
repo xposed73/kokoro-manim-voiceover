@@ -1,0 +1,19 @@
+[project]
+name = "kokoro-mv"
+version = "0.1.0"
+description = "Library for generating voiceovers using Kokoro ONNX in Manim."
+readme = "README.md"
+requires-python = ">=3.6"
+
+dependencies = [
+    "requests>=2.0",
+    "tqdm>=4.0",
+    "torch>=1.10",
+    "manim>=0.16.0",
+    "pyttsx3>=2.7",
+    "kokoro-onnx>=1.0"
+]
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
