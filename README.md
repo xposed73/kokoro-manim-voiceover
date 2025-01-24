@@ -1,6 +1,6 @@
 # Kokoro Manim Voiceover Setup Guide
 
-Unlock the potential of **Kokoro Manim Voiceover**, a powerful tool for creating synchronized voiceover animations with Manim. Follow the steps below to install and use it seamlessly.
+Discover **Kokoro Manim Voiceover**, a groundbreaking library for generating synchronized and realistic voiceovers in Manim animations. Unlike other tools, which are often either paid or produce unnatural voice quality, this library leverages the **Kokoro-82M parameter model** to deliver high-quality, free, and lifelike voiceovers. Follow the steps below to install and start using this innovative solution seamlessly.
 
 ---
 
