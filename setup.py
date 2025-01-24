@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='kokoro-mv',
+    name='kokoro_mv',
     version='0.1.0',
     author='Nadeem Akhtar Khan',
     author_email='nadeemak755@gmail.com',
@@ -20,6 +20,7 @@ setup(
             "kokoro-onnx>=0.3.6",
             "manim>=0.19.0",
             "manim-voiceover>=0.3.7",
-            "soundfile>=0.13.0"
+            "soundfile>=0.13.0",
+            "setuptools>=75.8.0"
     ],
 )
