@@ -1,4 +1,4 @@
-# kokoro-mv
+# Kokoro Manim Voiceover
 
 ## Install via pip
 Check python version
