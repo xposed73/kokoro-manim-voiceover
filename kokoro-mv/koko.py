@@ -17,8 +17,8 @@ from scipy.io.wavfile import write as write_wav
 class KokoroService(SpeechService):
     """Speech service class for kokoro_self (using text_to_speech via Kokoro ONNX)."""
 
-    def __init__(self, engine=None, model_path: str = "kokoro-v0_19.onnx", voices_path: str = "voices.bin",
-                 voice: str = 'af_bella', speed: float = 1.0, lang: str = "en-us", **kwargs):
+    def __init__(self, engine=None, model_path: str = "", voices_path: str = "",
+                 voice: str = '', speed: float = 1.0, lang: str = "en-us", **kwargs):
         self.kokoro = Kokoro(model_path, voices_path)
         self.voice = voice
         self.speed = speed

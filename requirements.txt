@@ -1,0 +1,7 @@
+kokoro-onnx
+soundfile
+numpy
+scipy
+manim
+manim-voiceover
+setuptools
