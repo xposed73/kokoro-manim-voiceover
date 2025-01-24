@@ -1,5 +1,6 @@
-# Install via pip
+## kokoro-mv
 
+# Install via pip
 Check python version
 ```console
 python --version
@@ -16,8 +17,8 @@ Install Kokoro-MV from github
 pip install git+https://github.com/xposed73/kokoro-mv.git
 ```
 
-# Install via uv
 
+# Install via uv
 ```console
 uv init -p 3.12
 uv venv
@@ -26,7 +27,6 @@ uv pip install git+https://github.com/xposed73/kokoro-mv.git
 
 
 # Example usage
-
 ```python
 from manim import *
 from manim_voiceover import VoiceoverScene
