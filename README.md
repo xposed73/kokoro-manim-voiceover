@@ -1,6 +1,6 @@
 # Install via pip
 
-```shell
+```cmd
 python --version
 
 python -m venv myenv
