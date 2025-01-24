@@ -1,10 +1,10 @@
 # Install via pip
-```shell
+```console
 pip install git+https://github.com/xposed73/kokoro-mv.git
 ```
 
 # Install via uv
-```shell
+```console
 uv init -p 3.12
 uv venv
 uv pip install git+https://github.com/xposed73/kokoro-mv.git
@@ -12,7 +12,7 @@ uv pip install git+https://github.com/xposed73/kokoro-mv.git
 
 
 # Example usage
-```python
+```console
 from manim import *
 from manim_voiceover import VoiceoverScene
 from kokoro_mv.koko import KokoroService
