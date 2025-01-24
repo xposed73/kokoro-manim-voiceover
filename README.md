@@ -1,36 +1,54 @@
-# Kokoro Manim Voiceover
+# Kokoro Manim Voiceover Setup Guide
 
-## Install via pip
-Check python version (Recommended Python Version = 3.12)
-```console
+Unlock the potential of **Kokoro Manim Voiceover**, a powerful tool for creating synchronized voiceover animations with Manim. Follow the steps below to install and use it seamlessly.
+
+---
+
+## 🔧 Installation via pip
+
+### 1. Verify Your Python Version  
+Ensure your Python version is **3.12** (recommended). Check your installed version using:  
+```bash
 python --version
 ```
 
-Create virtual environment
-```console
+### 2. Create a Virtual Environment  
+It’s best to work in a virtual environment to isolate dependencies:  
+```bash
 python -m venv myenv
-myenv\Scripts\activate
+myenv\Scripts\activate  # Activate the environment on Windows
 ```
 
-Install Kokoro-MV from github
-```console
+### 3. Install Kokoro Manim Voiceover  
+Install the library directly from GitHub:  
+```bash
 pip install git+https://github.com/xposed73/kokoro-manim-voiceover.git
 ```
 
+---
 
-## Install via uv
-```console
+## 🚀 Installation via uv  
+Alternatively, you can use **uv** for setup:  
+```bash
 uv init -p 3.12
 uv venv
 uv pip install git+https://github.com/xposed73/kokoro-manim-voiceover.git
 ```
 
-## Important
-- You also need to download these model files
-[`kokoro-v0_19.onnx`](https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files/kokoro-v0_19.onnx) and [`voices.bin`](https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files/voices.bin)
-- Place them in root directory of your project
+---
 
-## Example usage
+## 📂 Important Notes  
+- You **must download the following model files** to enable voiceover functionality:
+  - [`kokoro-v0_19.onnx`](https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files/kokoro-v0_19.onnx)
+  - [`voices.bin`](https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files/voices.bin)
+- Place these files in the **root directory** of your project.
+
+---
+
+## 💡 Example Usage
+
+Here's a sample script to demonstrate how to use Kokoro Manim Voiceover:
+
 ```python
 from manim import *
 from manim_voiceover import VoiceoverScene
@@ -59,6 +77,12 @@ class KokoExample(VoiceoverScene):
         self.wait()
 ```
 
-## Available voice names
+---
+
+## 🎤 Available Voice Names  
+You can use any of the following voice options in your projects:  
 `af`, `af_bella`, `af_nicole`, `af_sarah`, `af_sky`, `am_adam`, `am_michael`, `bf_emma`, `bf_isabella`, `bm_george`, `bm_lewis`
 
+---
+
+Enjoy creating seamless animations with synchronized voiceovers!
