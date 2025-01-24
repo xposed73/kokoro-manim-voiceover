@@ -57,7 +57,7 @@ setup(
         'torch>=1.10',       # Example: PyTorch (if needed for the Kokoro-82M model)
         'manim>=0.16.0',     # Example: Manim library for animations
         'pyttsx3>=2.7',      # Example: TTS library (if you're using it for voice synthesis)
-        'kokoro-onnx>=1.0',  # Adding kokoro-onnx as a dependency
+        'kokoro-onnx>=0.3.6',  # Adding kokoro-onnx as a dependency
     ],
     test_suite="tests",
     author="Nadeem Khan",
