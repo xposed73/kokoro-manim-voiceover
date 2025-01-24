@@ -1,12 +1,18 @@
 # Install via pip
 
-```cmd
+Check python version
+```shell
 python --version
+```
 
+Create virtual environment
+```shell
 python -m venv myenv
-
 myenv\Scripts\activate
+```
 
+Install Kokoro-MV from github
+```shell
 pip install git+https://github.com/xposed73/kokoro-mv.git
 ```
 
