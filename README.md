@@ -1,8 +1,7 @@
 # Kokoro Manim Voiceover
 
 ## Install via pip
-## Recommended Python Version = 3.12
-Check python version
+Check python version (Recommended Python Version = 3.12)
 ```console
 python --version
 ```
