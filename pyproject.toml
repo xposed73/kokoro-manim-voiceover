@@ -1,6 +1,6 @@
 [project]
 name = "kokoro-manim-voiceover"
-version = "0.1.0"
+version = "0.1.1"
 description = "Professional library for generating high-quality voiceovers in Manim animations using Kokoro-82M model"
 readme = "README.md"
 requires-python = ">=3.11"
@@ -33,11 +33,7 @@ classifiers = [
     "Topic :: Software Development :: Libraries :: Python Modules",
 ]
 
-[project.urls]
-Homepage = "https://github.com/xposed73/kokoro-manim-voiceover"
-Repository = "https://github.com/xposed73/kokoro-manim-voiceover"
-Issues = "https://github.com/xposed73/kokoro-manim-voiceover/issues"
-Documentation = "https://github.com/xposed73/kokoro-manim-voiceover#readme"
+
 
 [project.scripts]
 kokoro-mv-setup = "kokoro_mv.setup:main"
