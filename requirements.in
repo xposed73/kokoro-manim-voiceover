@@ -1,0 +1,9 @@
+# Core dependencies
+kokoro-onnx>=0.3.6
+manim>=0.19.0
+manim-voiceover>=0.3.7
+soundfile>=0.13.0
+numpy>=1.21.0
+scipy>=1.7.0
+setuptools>=75.8.0
+tqdm>=4.64.0

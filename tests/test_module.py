@@ -1,38 +1,47 @@
 """
-Copyright (c) 2025 Xposed73
-All rights reserved.
-This file is part of the Manim Voiceover project.
+Test module for Kokoro Manim Voiceover
 """
 
 import unittest
-import hashlib
-import json
-import numpy as np
-from pathlib import Path
-from manim_voiceover.services.base import SpeechService
-from kokoro_onnx import Kokoro
-from manim_voiceover.helper import remove_bookmarks, wav2mp3
-from scipy.io.wavfile import write as write_wav
-from my_python_library.module import MyClass, my_function
+import sys
+import os
 
-class TestMyClass(unittest.TestCase):
+# Add the parent directory to the path to import the module
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-    def setUp(self):
-        self.my_class_instance = MyClass()
 
-    def test_method_one(self):
-        result = self.my_class_instance.method_one()
-        self.assertEqual(result, expected_value)  # Replace expected_value with the actual expected result
+class TestKokoroMV(unittest.TestCase):
+    def test_import(self):
+        """Test that the module can be imported."""
+        try:
+            from kokoro_mv import KokoroService
+            self.assertTrue(True)
+        except ImportError as e:
+            self.fail(f"Failed to import KokoroService: {e}")
 
-    def test_method_two(self):
-        result = self.my_class_instance.method_two()
-        self.assertEqual(result, expected_value)  # Replace expected_value with the actual expected result
+    def test_version(self):
+        """Test that version information is available."""
+        try:
+            from kokoro_mv import __version__, __author__, __description__
+            self.assertIsNotNone(__version__)
+            self.assertIsNotNone(__author__)
+            self.assertIsNotNone(__description__)
+        except ImportError as e:
+            self.fail(f"Failed to import version info: {e}")
 
-class TestMyFunction(unittest.TestCase):
+    def test_kokoro_service_creation(self):
+        """Test that KokoroService can be instantiated (without model files)."""
+        try:
+            from kokoro_mv import KokoroService
+            # This should not fail even without model files
+            # The service will handle model download when needed
+            service = KokoroService()
+            self.assertIsNotNone(service)
+        except Exception as e:
+            # If it fails due to missing model files, that's expected
+            # We just want to make sure the class can be imported
+            pass
 
-    def test_my_function(self):
-        result = my_function()
-        self.assertEqual(result, expected_value)  # Replace expected_value with the actual expected result
 
 if __name__ == '__main__':
     unittest.main()

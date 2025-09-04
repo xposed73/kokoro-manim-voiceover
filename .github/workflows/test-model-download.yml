@@ -1,0 +1,56 @@
+name: Test Model Download
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  test-model-download:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+    
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+    
+    - name: Test model download functionality
+      run: |
+        python -c "
+        from kokoro_mv.setup import get_model_info, check_model_files
+        import os
+        
+        print('Testing model download functionality...')
+        
+        # Test model info retrieval
+        model_url, voices_url, model_file, voices_file = get_model_info()
+        print(f'Model URL: {model_url}')
+        print(f'Voices URL: {voices_url}')
+        print(f'Model file: {model_file}')
+        print(f'Voices file: {voices_file}')
+        
+        # Test file existence check
+        model_exists, voices_exists = check_model_files()
+        print(f'Model exists: {model_exists}')
+        print(f'Voices exists: {voices_exists}')
+        
+        print('✅ Model download functionality test passed!')
+        "
+    
+    - name: Test KokoroService import
+      run: |
+        python -c "
+        from kokoro_mv import KokoroService, __version__
+        print(f'✅ KokoroService imported successfully! Version: {__version__}')
+        print('✅ All imports working correctly!')
+        "

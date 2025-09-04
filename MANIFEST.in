@@ -1,0 +1,31 @@
+# Include package metadata
+include README.md
+include LICENSE
+include pyproject.toml
+include requirements.txt
+include requirements-dev.txt
+include requirements.in
+include CONTRIBUTING.md
+
+# Include package files
+recursive-include kokoro_mv *.py
+recursive-include kokoro_mv *.txt
+recursive-include kokoro_mv *.md
+
+# Include banner image
+include banner.jpg
+
+# Include GitHub templates
+recursive-include .github *.md
+recursive-include .github *.yml
+recursive-include .github *.yaml
+
+# Exclude development files
+exclude .gitignore
+exclude .gitattributes
+exclude .pre-commit-config.yaml
+exclude tests/*
+exclude *.pyc
+exclude __pycache__/*
+recursive-exclude * __pycache__
+recursive-exclude * *.py[co]

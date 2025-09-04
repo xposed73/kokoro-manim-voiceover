@@ -1,7 +1,7 @@
 [project]
 name = "kokoro-manim-voiceover"
 version = "0.1.0"
-description = "Library for generating voiceover in manim using Kokoro-82M model"
+description = "Professional library for generating high-quality voiceovers in Manim animations using Kokoro-82M model"
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
@@ -11,13 +11,14 @@ dependencies = [
     "soundfile>=0.13.0",
     "numpy>=1.21.0",
     "scipy>=1.7.0",
-    "setuptools>=75.8.0"
+    "setuptools>=75.8.0",
+    "tqdm>=4.64.0"
 ]
 authors = [
     {name = "Nadeem Akhtar Khan", email = "nadeemak755@gmail.com"}
 ]
 license = {text = "MIT"}
-keywords = ["manim", "voiceover", "text-to-speech", "kokoro", "animation"]
+keywords = ["manim", "voiceover", "text-to-speech", "kokoro", "animation", "tts", "ai-voice"]
 classifiers = [
     "Development Status :: 4 - Beta",
     "Intended Audience :: Developers",
@@ -28,13 +29,26 @@ classifiers = [
     "Programming Language :: Python :: 3.13",
     "Topic :: Multimedia :: Graphics",
     "Topic :: Multimedia :: Sound/Audio :: Speech",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Software Development :: Libraries :: Python Modules",
 ]
 
 [project.urls]
 Homepage = "https://github.com/xposed73/kokoro-manim-voiceover"
 Repository = "https://github.com/xposed73/kokoro-manim-voiceover"
 Issues = "https://github.com/xposed73/kokoro-manim-voiceover/issues"
+Documentation = "https://github.com/xposed73/kokoro-manim-voiceover#readme"
+
+[project.scripts]
+kokoro-mv-setup = "kokoro_mv.setup:main"
 
 [build-system]
 requires = ["setuptools>=75.8.0", "wheel"]
 build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["kokoro_mv*"]
+
+[tool.setuptools.package-data]
+kokoro_mv = ["*.txt", "*.md"]
