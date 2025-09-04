@@ -15,7 +15,7 @@ setup(
         'License :: OSI Approved :: MIT License',
         'Operating System :: OS Independent',
     ],
-    python_requires='>=3.12',
+    python_requires='>=3.11',
     install_requires=[
             "kokoro-onnx>=0.3.6",
             "manim>=0.19.0",

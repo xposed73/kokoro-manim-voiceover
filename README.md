@@ -4,12 +4,12 @@ Discover **Kokoro Manim Voiceover**, a groundbreaking library for generating syn
 
 ---
 
-![Kokoro Manim Voiceover](https://raw.githubusercontent.com/xposed73/kokoro-manim-voiceover/refs/heads/main/kokoro-manim-voiceover.jpg)
+![Kokoro Manim Voiceover](https://raw.githubusercontent.com/xposed73/kokoro-manim-voiceover/refs/heads/main/banner.jpg)
 
 ## 🔧 Installation via pip
 
 ### 1. Verify Your Python Version  
-Ensure your Python version is **3.12** (recommended). Check your installed version using:  
+Ensure your Python version is **3.11** or higher (3.12+ recommended). Check your installed version using:  
 ```bash
 python --version
 ```
@@ -32,20 +32,38 @@ pip install git+https://github.com/xposed73/kokoro-manim-voiceover.git
 ## 🚀 Installation via uv  
 Alternatively, you can use **uv** for setup:  
 ```bash
-uv init -p 3.12
+uv init -p 3.11
 uv venv
 uv pip install git+https://github.com/xposed73/kokoro-manim-voiceover.git
 ```
 
 ---
 
-### It will automatiacally install all the required things like manim, manim-voiceover etc.
+## 🛠️ Easy Installation Script
+
+For the easiest installation experience, use the provided installation script:
+
+```bash
+python install.py
+```
+
+This script will:
+- ✅ Check your Python version compatibility
+- ✅ Install all required dependencies
+- ✅ Install the package in development mode
+- ✅ Verify the installation works
+- ⚠️  Remind you to download the required model files
+
+---
+
+### It will automatically install all the required things like manim, manim-voiceover etc.
 
 ## 📂 Important Notes  
-- You **must download the following model files** to enable voiceover functionality:
-  - [`kokoro-v0_19.onnx`](https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files/kokoro-v0_19.onnx)
-  - [`voices.bin`](https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files/voices.bin)
-- Place these files in the **root directory** of your project.
+- **Model files are automatically downloaded** when you first use KokoroService!
+- The following files will be downloaded automatically if missing:
+  - `kokoro-v0_19.onnx` (~169MB)
+  - `voices.bin` (~50MB)
+- Files are saved in your project directory for future use.
 
 ---
 
@@ -61,9 +79,7 @@ from kokoro_mv.koko import KokoroService
 class KokoExample(VoiceoverScene):
     def construct(self):
         self.set_speech_service(KokoroService(
-            model_path="kokoro-v0_19.onnx",
-            voices_path="voices.bin",
-            voice="af"
+            voice="af"  # Model files auto-downloaded if missing
         ))
 
         circle = Circle()

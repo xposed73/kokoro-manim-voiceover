@@ -7,6 +7,8 @@ This file is part of the Manim Voiceover project.
 import hashlib
 import json
 import numpy as np
+import os
+import urllib.request
 from pathlib import Path
 from manim_voiceover.services.base import SpeechService
 from kokoro_onnx import Kokoro
@@ -19,6 +21,10 @@ class KokoroService(SpeechService):
 
     def __init__(self, engine=None, model_path: str = "", voices_path: str = "",
                  voice: str = '', speed: float = 1.0, lang: str = "en-us", **kwargs):
+        
+        # Auto-download model files if they don't exist
+        model_path, voices_path = self._ensure_model_files(model_path, voices_path)
+        
         self.kokoro = Kokoro(model_path, voices_path)
         self.voice = voice
         self.speed = speed
@@ -29,6 +35,47 @@ class KokoroService(SpeechService):
 
         self.engine = engine
         super().__init__(**kwargs)
+
+    def _ensure_model_files(self, model_path: str, voices_path: str):
+        """Ensure model files exist, download them if missing."""
+        # Default file names if not specified
+        if not model_path:
+            model_path = "kokoro-v0_19.onnx"
+        if not voices_path:
+            voices_path = "voices.bin"
+        
+        # Download model file if it doesn't exist
+        if not os.path.exists(model_path):
+            print(f"📥 Downloading model file: {model_path}")
+            self._download_file(
+                "https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files/kokoro-v0_19.onnx",
+                model_path
+            )
+        
+        # Download voices file if it doesn't exist
+        if not os.path.exists(voices_path):
+            print(f"📥 Downloading voices file: {voices_path}")
+            self._download_file(
+                "https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files/voices.bin",
+                voices_path
+            )
+        
+        return model_path, voices_path
+    
+    def _download_file(self, url: str, filename: str):
+        """Download a file from URL with progress indication."""
+        try:
+            def show_progress(block_num, block_size, total_size):
+                downloaded = block_num * block_size
+                if total_size > 0:
+                    percent = min(100, (downloaded * 100) // total_size)
+                    print(f"\r📥 Downloading... {percent}% ({downloaded // 1024 // 1024}MB/{total_size // 1024 // 1024}MB)", end="", flush=True)
+            
+            urllib.request.urlretrieve(url, filename, show_progress)
+            print(f"\n✅ Downloaded: {filename}")
+        except Exception as e:
+            print(f"\n❌ Failed to download {filename}: {e}")
+            raise
 
     def get_data_hash(self, input_data: dict) -> str:
         """
