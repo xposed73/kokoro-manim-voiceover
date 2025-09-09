@@ -9,10 +9,18 @@ Professional library for generating high-quality voiceovers in Manim animations 
 pip install kokoro-manim-voiceover
 ```
 
-### Using uv
+### Using uv (Recommended)
 ```bash
+# For new projects
+uv init my-project
+cd my-project
 uv add kokoro-manim-voiceover
+
+# Or install directly
+uv pip install kokoro-manim-voiceover
 ```
+
+**Note:** `uv` is a modern, high-performance Python package manager that offers significantly faster installations and better dependency resolution than pip. It's fully compatible with existing Python workflows.
 
 ## Quick Start
 
@@ -80,6 +88,51 @@ service = KokoroService(
 ## Model Files
 
 The library automatically downloads required model files (~220MB) on first use.
+
+## Development
+
+### Setting up development environment
+
+#### Using uv (Recommended)
+```bash
+# Clone the repository
+git clone https://github.com/nkayzai/kokoro-manim-voiceover.git
+cd kokoro-manim-voiceover
+
+# Install in development mode with all dependencies
+uv sync --dev
+
+# Run tests
+uv run pytest
+
+# Format code
+uv run black .
+uv run isort .
+
+# Type checking
+uv run mypy .
+```
+
+#### Using pip
+```bash
+# Clone the repository
+git clone https://github.com/nkayzai/kokoro-manim-voiceover.git
+cd kokoro-manim-voiceover
+
+# Create virtual environment
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+
+# Install in development mode
+pip install -e ".[dev]"
+
+# Run tests
+pytest
+
+# Format code
+black .
+isort .
+```
 
 ## License
 
