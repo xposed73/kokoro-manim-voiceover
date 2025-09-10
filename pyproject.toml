@@ -1,6 +1,6 @@
 [project]
 name = "kokoro-manim-voiceover"
-version = "0.1.1"
+version = "0.1.2"
 description = "Professional library for generating high-quality voiceovers in Manim animations using Kokoro-82M model"
 readme = {file = "README.md", content-type = "text/markdown"}
 requires-python = ">=3.11"
