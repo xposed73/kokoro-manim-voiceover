@@ -6,12 +6,12 @@ animations using the Kokoro-82M model for natural-sounding voiceovers.
 
 Author: Nadeem Akhtar Khan
 License: MIT
-Version: 0.1.3
+Version: 0.1.0
 """
 
 from .koko import KokoroService
 
-__version__ = "0.1.3"
+__version__ = "0.1.0"
 __author__ = "Nadeem Akhtar Khan"
 __email__ = "nadeemak755@gmail.com"
 __license__ = "MIT"
