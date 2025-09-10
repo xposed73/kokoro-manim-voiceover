@@ -6,11 +6,8 @@ on:
   workflow_dispatch:
 
 jobs:
-  publish:
+  build:
     runs-on: ubuntu-latest
-    permissions:
-      id-token: write  # IMPORTANT: this permission is mandatory for trusted publishing
-
     steps:
     - uses: actions/checkout@v4
     
@@ -30,8 +27,24 @@ jobs:
     - name: Check package
       run: twine check dist/*
     
+    - name: Upload artifacts
+      uses: actions/upload-artifact@v4
+      with:
+        name: python-package-distributions
+        path: dist/
+
+  publish:
+    runs-on: ubuntu-latest
+    needs: build
+    environment: pypi  # This will be created in GitHub repository settings
+    permissions:
+      id-token: write  # IMPORTANT: this permission is mandatory for trusted publishing
+    steps:
+    - name: Download artifacts
+      uses: actions/download-artifact@v4
+      with:
+        name: python-package-distributions
+        path: dist/
+    
     - name: Publish to PyPI
       uses: pypa/gh-action-pypi-publish@release/v1
-      with:
-        # Use trusted publishing (no API token needed)
-        # Make sure to configure trusted publishing in PyPI project settings
