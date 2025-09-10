@@ -4,12 +4,12 @@ Professional library for generating high-quality voiceovers in Manim animations 
 
 ## Installation
 
-### Using pip
+### From PyPI (Recommended)
 ```bash
 pip install kokoro-manim-voiceover
 ```
 
-### Using uv (Recommended)
+### Using uv (Alternative)
 ```bash
 # For new projects
 uv init my-project
@@ -21,6 +21,13 @@ uv pip install kokoro-manim-voiceover
 ```
 
 **Note:** `uv` is a modern, high-performance Python package manager that offers significantly faster installations and better dependency resolution than pip. It's fully compatible with existing Python workflows.
+
+### From Source
+```bash
+git clone https://github.com/nkayzai/kokoro-manim-voiceover.git
+cd kokoro-manim-voiceover
+pip install -e .
+```
 
 ## Quick Start
 
