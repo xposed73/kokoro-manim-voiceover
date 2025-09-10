@@ -2,7 +2,7 @@
 
 Professional library for generating high-quality voiceovers in Manim animations using the Kokoro-82M model.
 
-[![Donate](https://raw.githubusercontent.com/nkayzai/kokoro-manim-voiceover/refs/heads/main/media/donation.jpg)](upi://pay?pa=nk73@upi)
+[![Donate](https://raw.githubusercontent.com/nkayzai/kokoro-manim-voiceover/refs/heads/main/media/donation.png)](upi://pay?pa=nk73@upi)
 
 
 ## Installation
@@ -148,3 +148,4 @@ isort .
 
 
 MIT License
+
