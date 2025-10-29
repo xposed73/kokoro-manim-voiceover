@@ -13,10 +13,10 @@ from typing import Tuple, Optional
 
 def get_model_info() -> Tuple[str, str, str, str]:
     """Get model file information."""
-    model_url = "https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files/kokoro-v0_19.onnx"
-    voices_url = "https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files/voices.bin"
-    model_file = "kokoro-v0_19.onnx"
-    voices_file = "voices.bin"
+    model_url = "https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files-v1.0/kokoro-v1.0.onnx"
+    voices_url = "https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files-v1.0/voices-v1.0.bin"
+    model_file = "kokoro-v1.0.onnx"
+    voices_file = "voices-v1.0.bin"
     return model_url, voices_url, model_file, voices_file
 
 
