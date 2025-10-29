@@ -125,29 +125,27 @@ Source: Kokoro-82M VOICES.md by hexgrad (Apache-2.0).
 
 Preview recordings rendered from the included sample scenes:
 
-### English (US)
-<video src="https://raw.githubusercontent.com/xposed73/kokoro-manim-voiceover/main/samples/english_us.mp4" width="560" controls></video>
+### Mandarin Chinese
+https://github.com/user-attachments/assets/cc9cacd6-001e-43f8-a441-14ad20da6cfa
 
 ### English (GB)
-<video src="https://raw.githubusercontent.com/xposed73/kokoro-manim-voiceover/main/samples/english_gb.mp4" width="560" controls></video>
+https://github.com/user-attachments/assets/12e01a68-35b6-435d-9cfe-5f414f16210a
+
+### English (US)
+https://github.com/user-attachments/assets/d1b0de7a-42fb-4e46-a2c7-6ec0f2a37006
+
+### French 
+https://github.com/user-attachments/assets/f3c7eed1-b5c0-4423-a62a-19d56405d486
 
 ### Hindi
-<video src="https://raw.githubusercontent.com/xposed73/kokoro-manim-voiceover/main/samples/hindi.mp4" width="560" controls></video>
-
-### Mandarin Chinese
-<video src="https://raw.githubusercontent.com/xposed73/kokoro-manim-voiceover/main/samples/chinese_mandarian.mp4" width="560" controls></video>
-
-### Spanish
-<video src="https://raw.githubusercontent.com/xposed73/kokoro-manim-voiceover/main/samples/spanish.mp4" width="560" controls></video>
-
-### French
-<video src="https://raw.githubusercontent.com/xposed73/kokoro-manim-voiceover/main/samples/french.mp4" width="560" controls></video>
+https://github.com/user-attachments/assets/cc131788-03f7-4157-bb4e-db074f328d3e
 
 ### Italian
-<video src="https://raw.githubusercontent.com/xposed73/kokoro-manim-voiceover/main/samples/italian.mp4" width="560" controls></video>
+https://github.com/user-attachments/assets/d2fd228e-0179-4008-9e5f-464b5cbfe053
 
-### Brazilian Portuguese
-<video src="https://raw.githubusercontent.com/xposed73/kokoro-manim-voiceover/main/samples/portuguese_br.mp4" width="560" controls></video>
+### Portuguese
+https://github.com/user-attachments/assets/ed17f48f-e541-4b2a-b820-f0a13b175df8
+
 
 ## Sample Scenes (code)
 
@@ -301,4 +299,5 @@ To publish this package to PyPI:
 
 
 MIT License
+
 
