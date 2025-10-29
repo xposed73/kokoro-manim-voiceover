@@ -123,35 +123,18 @@ Source: Kokoro-82M VOICES.md by hexgrad (Apache-2.0).
 
 ## Video Samples
 
-Preview recordings rendered from the included sample scenes (play inline below):
+Preview recordings rendered from the included sample scenes (click to open):
 
-<div align="center">
+- English (US): [samples/english_us.mp4](samples/english_us.mp4)
+- English (GB): [samples/english_gb.mp4](samples/english_gb.mp4)
+- Hindi: [samples/hindi.mp4](samples/hindi.mp4)
+- Mandarin Chinese: [samples/chinese_mandarian.mp4](samples/chinese_mandarian.mp4)
+- Spanish: [samples/spanish.mp4](samples/spanish.mp4)
+- French: [samples/french.mp4](samples/french.mp4)
+- Italian: [samples/italian.mp4](samples/italian.mp4)
+- Brazilian Portuguese: [samples/portuguese_br.mp4](samples/portuguese_br.mp4)
 
-<p><strong>English (US)</strong></p>
-<video src="https://raw.githubusercontent.com/xposed73/kokoro-manim-voiceover/main/samples/english_us.mp4" width="560" controls></video>
-
-<p><strong>English (GB)</strong></p>
-<video src="https://raw.githubusercontent.com/xposed73/kokoro-manim-voiceover/main/samples/english_gb.mp4" width="560" controls></video>
-
-<p><strong>Hindi</strong></p>
-<video src="https://raw.githubusercontent.com/xposed73/kokoro-manim-voiceover/main/samples/hindi.mp4" width="560" controls></video>
-
-<p><strong>Mandarin Chinese</strong></p>
-<video src="https://raw.githubusercontent.com/xposed73/kokoro-manim-voiceover/main/samples/chinese_mandarian.mp4" width="560" controls></video>
-
-<p><strong>Spanish</strong></p>
-<video src="https://raw.githubusercontent.com/xposed73/kokoro-manim-voiceover/main/samples/spanish.mp4" width="560" controls></video>
-
-<p><strong>French</strong></p>
-<video src="https://raw.githubusercontent.com/xposed73/kokoro-manim-voiceover/main/samples/french.mp4" width="560" controls></video>
-
-<p><strong>Italian</strong></p>
-<video src="https://raw.githubusercontent.com/xposed73/kokoro-manim-voiceover/main/samples/italian.mp4" width="560" controls></video>
-
-<p><strong>Brazilian Portuguese</strong></p>
-<video src="https://raw.githubusercontent.com/xposed73/kokoro-manim-voiceover/main/samples/portuguese_br.mp4" width="560" controls></video>
-
-</div>
+Note: GitHub Markdown does not support inline video playback without HTML. These links will open the videos in the browser player.
 
 ## Sample Scenes (code)
 
