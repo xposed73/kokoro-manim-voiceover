@@ -48,10 +48,10 @@ dev = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/nkayzai/kokoro-manim-voiceover"
-Repository = "https://github.com/nkayzai/kokoro-manim-voiceover"
-Documentation = "https://github.com/nkayzai/kokoro-manim-voiceover#readme"
-"Bug Tracker" = "https://github.com/nkayzai/kokoro-manim-voiceover/issues"
+Homepage = "https://github.com/xposed73/kokoro-manim-voiceover"
+Repository = "https://github.com/xposed73/kokoro-manim-voiceover"
+Documentation = "https://github.com/xposed73/kokoro-manim-voiceover#readme"
+"Bug Tracker" = "https://github.com/xposed73/kokoro-manim-voiceover/issues"
 
 
 

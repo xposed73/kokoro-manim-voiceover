@@ -266,6 +266,37 @@ black .
 isort .
 ```
 
+## Publishing to PyPI
+
+To publish this package to PyPI:
+
+1. **Install build tools:**
+   ```bash
+   pip install build twine
+   ```
+
+2. **Build the package:**
+   ```bash
+   python -m build
+   ```
+   This creates `dist/` directory with wheel and source distribution files.
+
+3. **Upload to PyPI (TestPyPI first for testing):**
+   ```bash
+   # Test on TestPyPI
+   twine upload --repository-url https://test.pypi.org/legacy/ dist/*
+   
+   # Once verified, upload to production PyPI
+   twine upload dist/*
+   ```
+
+4. **Verify installation:**
+   ```bash
+   pip install kokoro-manim-voiceover
+   ```
+
+**Note:** You'll need PyPI credentials (API token recommended). Create one at [pypi.org/manage/account/token/](https://pypi.org/manage/account/token/)
+
 ## License
 
 
