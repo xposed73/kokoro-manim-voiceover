@@ -126,28 +126,28 @@ Source: Kokoro-82M VOICES.md by hexgrad (Apache-2.0).
 Preview recordings rendered from the included sample scenes:
 
 ### English (US)
-<video src="samples/english_us.mp4" width="560" controls></video>
+<video src="https://raw.githubusercontent.com/xposed73/kokoro-manim-voiceover/main/samples/english_us.mp4" width="560" controls></video>
 
 ### English (GB)
-<video src="samples/english_gb.mp4" width="560" controls></video>
+<video src="https://raw.githubusercontent.com/xposed73/kokoro-manim-voiceover/main/samples/english_gb.mp4" width="560" controls></video>
 
 ### Hindi
-<video src="samples/hindi.mp4" width="560" controls></video>
+<video src="https://raw.githubusercontent.com/xposed73/kokoro-manim-voiceover/main/samples/hindi.mp4" width="560" controls></video>
 
 ### Mandarin Chinese
-<video src="samples/chinese_mandarian.mp4" width="560" controls></video>
+<video src="https://raw.githubusercontent.com/xposed73/kokoro-manim-voiceover/main/samples/chinese_mandarian.mp4" width="560" controls></video>
 
 ### Spanish
-<video src="samples/spanish.mp4" width="560" controls></video>
+<video src="https://raw.githubusercontent.com/xposed73/kokoro-manim-voiceover/main/samples/spanish.mp4" width="560" controls></video>
 
 ### French
-<video src="samples/french.mp4" width="560" controls></video>
+<video src="https://raw.githubusercontent.com/xposed73/kokoro-manim-voiceover/main/samples/french.mp4" width="560" controls></video>
 
 ### Italian
-<video src="samples/italian.mp4" width="560" controls></video>
+<video src="https://raw.githubusercontent.com/xposed73/kokoro-manim-voiceover/main/samples/italian.mp4" width="560" controls></video>
 
 ### Brazilian Portuguese
-<video src="samples/portuguese_br.mp4" width="560" controls></video>
+<video src="https://raw.githubusercontent.com/xposed73/kokoro-manim-voiceover/main/samples/portuguese_br.mp4" width="560" controls></video>
 
 ## Sample Scenes (code)
 
