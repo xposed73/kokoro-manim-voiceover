@@ -143,7 +143,7 @@ https://github.com/user-attachments/assets/cc131788-03f7-4157-bb4e-db074f328d3e
 ### Italian
 https://github.com/user-attachments/assets/d2fd228e-0179-4008-9e5f-464b5cbfe053
 
-### Spanish
+### Portuguese
 https://github.com/user-attachments/assets/ed17f48f-e541-4b2a-b820-f0a13b175df8
 
 
@@ -299,4 +299,5 @@ To publish this package to PyPI:
 
 
 MIT License
+
 
