@@ -11,7 +11,7 @@ Version: 0.1.2
 
 from .koko import KokoroService
 
-__version__ = "0.1.4"
+__version__ = "0.1.5"
 __author__ = "Nadeem Akhtar Khan"
 __email__ = "nadeemak755@gmail.com"
 __license__ = "MIT"
