@@ -20,7 +20,7 @@ class KokoroService(SpeechService):
     """Speech service class for kokoro_self (using text_to_speech via Kokoro ONNX)."""
 
     def __init__(self, engine=None, model_path: str = "", voices_path: str = "",
-                 voice: str = '', speed: float = 1.0, lang: str = "en-us", **kwargs):
+                 voice: str = '', speed: float = 1.0, lang: str = "en-us", volume: float = 1.0, **kwargs):
         
         # Auto-download model files if they don't exist
         model_path, voices_path = self._ensure_model_files(model_path, voices_path)
@@ -29,6 +29,7 @@ class KokoroService(SpeechService):
         self.voice = voice
         self.speed = speed
         self.lang = lang
+        self.volume = float(volume)
 
         if engine is None:
             engine = self.text_to_speech  # Default to local function
@@ -40,15 +41,15 @@ class KokoroService(SpeechService):
         """Ensure model files exist, download them if missing."""
         # Default file names if not specified
         if not model_path:
-            model_path = "kokoro-v0_19.onnx"
+            model_path = "kokoro-v1.0.onnx"
         if not voices_path:
-            voices_path = "voices.bin"
+            voices_path = "voices-v1.0.bin"
         
         # Download model file if it doesn't exist
         if not os.path.exists(model_path):
             print(f"📥 Downloading model file: {model_path}")
             self._download_file(
-                "https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files/kokoro-v0_19.onnx",
+                "https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files-v1.0/kokoro-v1.0.onnx",
                 model_path
             )
         
@@ -56,7 +57,7 @@ class KokoroService(SpeechService):
         if not os.path.exists(voices_path):
             print(f"📥 Downloading voices file: {voices_path}")
             self._download_file(
-                "https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files/voices.bin",
+                "https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files-v1.0/voices-v1.0.bin",
                 voices_path
             )
         
@@ -95,7 +96,7 @@ class KokoroService(SpeechService):
 
     import numpy as np
 
-    def text_to_speech(self, text, output_file, voice_name, speed, lang):
+    def text_to_speech(self, text, output_file, voice_name, speed, lang, volume: float = 1.0):
         """
         Generates speech from text using Kokoro ONNX and saves the audio file.
         Normalizes the audio to make it audible.
@@ -109,6 +110,15 @@ class KokoroService(SpeechService):
         max_val = np.max(np.abs(samples))
         if max_val > 0:
             samples = samples / max_val
+
+        # Apply post-gain based on volume, with clipping to avoid distortion
+        try:
+            gain = float(volume)
+        except Exception:
+            gain = 1.0
+        if not np.isfinite(gain):
+            gain = 1.0
+        samples = np.clip(samples * gain, -1.0, 1.0)
 
         # Convert to 16-bit integer PCM format
         samples = (samples * 32767).astype("int16")
@@ -124,7 +134,7 @@ class KokoroService(SpeechService):
         if cache_dir is None:
             cache_dir = self.cache_dir
 
-        input_data = {"input_text": text, "service": "kokoro_self", "voice": self.voice, "lang": self.lang}
+        input_data = {"input_text": text, "service": "kokoro_self", "voice": self.voice, "lang": self.lang, "volume": self.volume}
         cached_result = self.get_cached_result(input_data, cache_dir)
         if cached_result is not None:
             return cached_result
@@ -142,6 +152,7 @@ class KokoroService(SpeechService):
             voice_name=self.voice,
             speed=self.speed,
             lang=self.lang,
+            volume=self.volume,
         )
 
         # Convert .wav to .mp3
