@@ -101,6 +101,9 @@ class KokoroService(SpeechService):
         Generates speech from text using Kokoro ONNX and saves the audio file.
         Normalizes the audio to make it audible.
         """
+        # Remove bookmarks from the text (issue #6)
+        text = remove_bookmarks(text)
+        
         # Generate audio samples using Kokoro
         samples, sample_rate = self.kokoro.create(
             text, voice=voice_name, speed=speed, lang=lang
